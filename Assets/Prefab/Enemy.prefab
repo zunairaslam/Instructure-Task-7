@@ -1601,7 +1601,7 @@ Transform:
   m_GameObject: {fileID: 3942205806244180129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.26632, z: 4.33}
-  m_LocalScale: {x: 1, y: 0.8135, z: 1}
+  m_LocalScale: {x: 0.73483, y: 0.56767976, z: 0.73483}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3942205806244385609}
@@ -1682,6 +1682,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  bombPrefab: {fileID: 2579826035396129487, guid: ce1ccb4c2f102f54386a256616013603, type: 3}
+  startTime: 2
+  delayTime: 4
 --- !u!1 &3942205806244180133
 GameObject:
   m_ObjectHideFlags: 0

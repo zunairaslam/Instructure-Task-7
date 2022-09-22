@@ -54,13 +54,7 @@ public class PlayerController : MonoBehaviour
         GameObject bomb = Instantiate(bombPrefab, transform.position + new Vector3(0, 4f, 0), bombPrefab.transform.rotation);
         Rigidbody bombRb = bomb.GetComponent<Rigidbody>();
         bombRb.AddForce((transform.up + transform.forward) * 4, ForceMode.Impulse);
-        StartCoroutine(BombDestroy());
+        
     }
-    IEnumerator BombDestroy()
-    {
-        yield return new WaitForSeconds(4);
-        Destroy(GameObject.FindGameObjectWithTag("Bomb"));
-        Destroy(GameObject.FindGameObjectWithTag("Bomb Radius").GetComponent<Radius>().enemy);
-        Debug.Log("bye");
-    }
+    
 }

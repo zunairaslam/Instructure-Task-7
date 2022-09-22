@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class SpawnManager : MonoBehaviour
     private float spawnRange = 9f;
     public int enemyCount;
     public int waveNumber = 1;
+    public TMP_Text waveText;
+    public int score = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,8 @@ public class SpawnManager : MonoBehaviour
         if (enemyCount == 0)
         {
             waveNumber++;
+            score = waveNumber;
+            waveText.text= score.ToString("Wave "+waveNumber+" /5");
             SpawnEnemyWave(waveNumber);
             Instantiate(powerupPrefabs, GenerateSpawnPosition(), powerupPrefabs.transform.rotation);
             //Instantiate(firePrefebs, transform.position, firePrefebs.transform.rotation);
